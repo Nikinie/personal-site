@@ -1,123 +1,129 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar";
+import IconCarousel from "../components/IconCarousel";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<svg
-			class="astro-a"
-			width="495"
-			height="623"
-			viewBox="0 0 495 623"
-			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
-			aria-hidden="true"
-		>
-			<path
-				fill-rule="evenodd"
-				clip-rule="evenodd"
-				d="M167.19 364.254C83.4786 364.254 0 404.819 0 404.819C0 404.819 141.781 19.4876 142.087 18.7291C146.434 7.33701 153.027 0 162.289 0H332.441C341.703 0 348.574 7.33701 352.643 18.7291C352.92 19.5022 494.716 404.819 494.716 404.819C494.716 404.819 426.67 364.254 327.525 364.254L264.41 169.408C262.047 159.985 255.147 153.581 247.358 153.581C239.569 153.581 232.669 159.985 230.306 169.408L167.19 364.254ZM160.869 530.172C160.877 530.18 160.885 530.187 160.894 530.195L160.867 530.181C160.868 530.178 160.868 530.175 160.869 530.172ZM136.218 411.348C124.476 450.467 132.698 504.458 160.869 530.172C160.997 529.696 161.125 529.242 161.248 528.804C161.502 527.907 161.737 527.073 161.917 526.233C165.446 509.895 178.754 499.52 195.577 500.01C211.969 500.487 220.67 508.765 223.202 527.254C224.141 534.12 224.23 541.131 224.319 548.105C224.328 548.834 224.337 549.563 224.347 550.291C224.563 566.098 228.657 580.707 237.264 593.914C245.413 606.426 256.108 615.943 270.749 622.478C270.593 621.952 270.463 621.508 270.35 621.126C270.045 620.086 269.872 619.499 269.685 618.911C258.909 585.935 266.668 563.266 295.344 543.933C298.254 541.971 301.187 540.041 304.12 538.112C310.591 533.854 317.059 529.599 323.279 525.007C345.88 508.329 360.09 486.327 363.431 457.844C364.805 446.148 363.781 434.657 359.848 423.275C358.176 424.287 356.587 425.295 355.042 426.275C351.744 428.366 348.647 430.33 345.382 431.934C303.466 452.507 259.152 455.053 214.03 448.245C184.802 443.834 156.584 436.019 136.218 411.348Z"
-				fill="url(#paint0_linear_1805_24383)"></path>
-			<defs>
-				<linearGradient
-					id="paint0_linear_1805_24383"
-					x1="247.358"
-					y1="0"
-					x2="247.358"
-					y2="622.479"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop stop-opacity="0.9"></stop>
-					<stop offset="1" stop-opacity="0.2"></stop>
-				</linearGradient>
-			</defs>
-		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title="Niki Portfolio">
+  <!-- <Navbar /> -->
+  <main class="w-full px-[4%] pb-6 md:px-[8%] xl:px-[12%]">
+    <div class="flex">
+      <div>
+        <div class="relative mt-8">
+          <span
+            class="absolute inset-0 select-none text-5xl font-bold text-purple-200 opacity-20 blur-md sm:text-7xl"
+          >
+            Niki Niemonen
+          </span>
+          <span class="relative text-5xl font-bold text-purple-200 sm:text-7xl"
+            >Niki Niemonen</span
+          >
+        </div>
+        <p class="mt-10 text-3xl sm:text-5xl">
+          I'm a <a class="underline decoration-purple-400">Software Engineer</a>
+        </p>
+        <p class="mt-4 text-3xl sm:text-5xl">
+          Currently employed at <a
+            target="_blank"
+            referrerpolicy="no-referrer"
+            href="https://www.fellowmind.com/en/about-us/key-facts-and-figures/"
+            class="rounded-md bg-slate-800 stroke-blue-200 px-1 text-blue-200 hover:stroke-fuchsia-600 hover:text-fuchsia-600"
+          >
+            <span class="underline decoration-fuchsia-500"
+              >Fellowmind Finland</span
+            >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              class="mb-4 ml-0 inline h-4 w-4"
+            >
+              <path
+                d="M21 9L21 3M21 3H15M21 3L13 11M10 5H7.8C6.11984 5 5.27976 5 4.63803 5.32698C4.07354 5.6146 3.6146 6.07354 3.32698 6.63803C3 7.27976 3 8.11984 3 9.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21H14.2C15.8802 21 16.7202 21 17.362 20.673C17.9265 20.3854 18.3854 19.9265 18.673 19.362C19 18.7202 19 17.8802 19 16.2V14"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </p>
+        <div class="flex gap-2">
+          <button
+            type="button"
+            copy-button
+            class="mt-8 flex transform items-center rounded bg-purple-700 p-2 pl-4 text-lg text-white shadow-lg shadow-purple-500/50 transition-transform duration-[50ms] active:scale-[0.98]"
+          >
+            niki.niemonen@gmail.com
+            <svg
+              class="ml-2 h-8 w-8"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                copy-svg
+                class="fill-white transition-colors duration-75"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M19.5 16.5L19.5 4.5L18.75 3.75H9L8.25 4.5L8.25 7.5L5.25 7.5L4.5 8.25V20.25L5.25 21H15L15.75 20.25V17.25H18.75L19.5 16.5ZM15.75 15.75L15.75 8.25L15 7.5L9.75 7.5V5.25L18 5.25V15.75H15.75ZM6 9L14.25 9L14.25 19.5L6 19.5L6 9Z"
+              ></path>
+            </svg>
+          </button>
+          <a
+            class="mt-8 flex transform items-center rounded bg-slate-700 stroke-blue-200 p-2 pl-4 text-lg transition-transform duration-[50ms] hover:stroke-fuchsia-300 hover:text-fuchsia-300 active:scale-[0.98]"
+            target="_blank"
+            referrerpolicy="no-referrer"
+            href="https://www.linkedin.com/in/niki-niemonen-bb14a4294/"
+            ><span class="decoration-slate-500">LinkedIn</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              class="mb-4 ml-2 inline h-4 w-4"
+            >
+              <path
+                d="M21 9L21 3M21 3H15M21 3L13 11M10 5H7.8C6.11984 5 5.27976 5 4.63803 5.32698C4.07354 5.6146 3.6146 6.07354 3.32698 6.63803C3 7.27976 3 8.11984 3 9.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21H14.2C15.8802 21 16.7202 21 17.362 20.673C17.9265 20.3854 18.3854 19.9265 18.673 19.362C19 18.7202 19 17.8802 19 16.2V14"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg></a
+          >
+        </div>
+      </div>
+    </div>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>
+    <div class="mt-12 w-full">
+      <p class="text-xl">Some tech i've worked with</p>
+      <IconCarousel />
+    </div>
+
+    <div class="mt-12 w-full">
+      <p class="text-xl">Personal projects</p>
+      <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <ProjectCard
+          title="Redis clone in Go"
+          body="A simple redis clone in Go, and a client in C#"
+          githubLink="https://github.com/Nikinie/redis-clone"
+        />
+      </div>
+    </div>
+
+    <script>
+      const copySvgPathElements = document.querySelectorAll("[copy-svg]");
+      const buttons = document.querySelectorAll("[copy-button]");
+      buttons.forEach((button) => {
+        button.addEventListener("mousedown", () => {
+          navigator.clipboard.writeText("niki.niemonen@gmail.com");
+          copySvgPathElements.forEach((pathEl) => {
+            pathEl.classList.remove("fill-white");
+            pathEl.classList.add("fill-green-600");
+          });
+        });
+        button.addEventListener("focusout", () => {
+          copySvgPathElements.forEach((pathEl) => {
+            pathEl.classList.remove("fill-green-600");
+            pathEl.classList.add("fill-white");
+          });
+        });
+      });
+    </script>
+    <style></style>
+  </main>
+</Layout>
