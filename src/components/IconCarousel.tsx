@@ -34,8 +34,6 @@ const svgList = [
 const timesToRepeat = 10;
 const svgComponents = svgList; //Array(timesToRepeat).flatMap(() => svgList);
 
-console.log(svgComponents);
-
 export default component$(() => {
   return (
     <div class="flex w-full flex-wrap overflow-hidden">
